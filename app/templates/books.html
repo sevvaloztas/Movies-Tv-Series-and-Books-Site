@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="canonical" href="{{ url_for('static', filename='css/styles.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/books.css') }}"> <!-- books.css dosyasını ekledik -->
+</head>
+<body>
+
+<!-- Navbar start -->
+<div class="navbar">
+    <div class="navbar-wrapper">
+        <div class="logo-wrapper">
+            <h1 class="logo">MY MONTH</h1>
+        </div>
+        <div class="menu-container">
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="http://127.0.0.1:5000/">Main Page</a></li>
+                <li class="menu-list-item"><a href="http://127.0.0.1:5000/movies">Movies</a></li>
+                <li class="menu-list-item"><a href="http://127.0.0.1:5000/tvseries">Tv Series</a></li>
+                <li class="menu-list-item active"><a href="http://127.0.0.1:5000/books">Books</a></li>
+            </ul>
+        </div>
+        <div class="profile-container">
+            <img class="profile-picture" src="{{ url_for('static', filename='img/profile.png') }}" alt="Profile Image">
+            <div class="profile-text-container">
+                <span class="profile-text">Profile</span>
+                <i class="bi bi-caret-down-fill"></i>
+            </div>
+            <div class="toggle">
+                <i class="bi bi-moon-fill toggle-icon"></i>
+                <i class="bi bi-brightness-high-fill toggle-icon"></i>
+                <div class="toggle-ball"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navbar end -->
+
+<!-- Sidebar start -->
+<div class="sidebar">
+    <i class="bi bi-search"></i>
+    <i class="bi bi-house-door-fill"></i> 
+    <i class="bi bi-people-fill"></i>
+    <i class="bi bi-bookmarks-fill"></i>
+</div>
+<!-- Sidebar end -->
+
+<!-- Books section start -->
+<section class="books-section">
+  <div class="container">
+      <div class="row book-list">
+          <!-- Dinamik olarak kitap kartlarını döngü ile oluştur -->
+          {% for book in books %}
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2 book-card">
+              <div class="book">
+                  <img src="{{ book.cover_url }}" alt="{{ book.title }}">
+                  <div class="book-info">
+                      <h3>{{ book.title }}</h3>
+                      <p>Author: {{ book.author }}</p>
+                      <p>{{ book.description }}</p>
+                  </div>
+              </div>
+          </div>
+          {% else %}
+          <p>No books found.</p>  <!-- Kitap bulunmazsa mesaj yaz -->
+          {% endfor %}
+      </div>
+  </div>
+</section>
+<!-- Books section end -->
+
+</body>
+</html>

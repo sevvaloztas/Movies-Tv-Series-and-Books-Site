@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Contents</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Contents</h1>
+        <ul>
+            {% for content in contents %}
+                <li>
+                    <h2>{{ content.title }}</h2>
+                    <p>Type: {{ content.type }}</p>
+                    <p>Date Watched: {{ content.date_watched }}</p>
+                    <p>Rating: {{ content.rating }}</p>
+                    <p>Review: {{ content.review }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

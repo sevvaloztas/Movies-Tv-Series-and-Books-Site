@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/books.css') }}">
+    <style>
+        .profile-container {
+            position: relative;
+        }
+        .profile-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            z-index: 1;
+            min-width: 160px;
+        }
+        .profile-dropdown a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .profile-dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+        .profile-container:hover .profile-dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar start -->
+<div class="navbar">
+    <div class="navbar-wrapper">
+        <div class="logo-wrapper">
+            <h1 class="logo">MY MONTH</h1>
+        </div>
+        <div class="menu-container">
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="http://127.0.0.1:5000/">Main Page</a></li>
+                <li class="menu-list-item"><a href="http://127.0.0.1:5000/movies">Movies</a></li>
+                <li class="menu-list-item"><a href="http://127.0.0.1:5000/tvseries">Tv Series</a></li>
+                <li class="menu-list-item active"><a href="http://127.0.0.1:5000/books">Books</a></li>
+            </ul>
+        </div>
+        <div class="profile-container">
+            <img class="profile-picture" src="{{ url_for('static', filename='img/profile.png') }}" alt="Profile Image">
+            <div class="profile-text-container">
+                <span class="profile-text">Profile</span>
+                <i class="bi bi-caret-down-fill"></i>
+            </div>
+            <div class="profile-dropdown">
+                <a href="http://127.0.0.1:5000/mymonth">My Month</a>
+                <a href="http://127.0.0.1:5000/logout">Logout</a>
+            </div>
+        </div>
+        <div class="toggle">
+            <i class="bi bi-moon-fill toggle-icon"></i>
+            <i class="bi bi-brightness-high-fill toggle-icon"></i>
+            <div class="toggle-ball"></div>
+        </div>
+    </div>
+</div>
+<!-- Navbar end -->
+
+<!-- Sidebar start -->
+<div class="sidebar">
+    <i class="bi bi-search"></i>
+    <i class="bi bi-house-door-fill"></i> 
+    <i class="bi bi-people-fill"></i>
+    <i class="bi bi-bookmarks-fill"></i>
+</div>
+<!-- Sidebar end -->
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Content</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Content</h1>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.title.label }}<br>
+                {{ form.title(size=32) }}<br>
+            </div>
+            <div>
+                {{ form.type.label }}<br>
+                {{ form.type() }}<br>
+            </div>
+            <div>
+                {{ form.date_watched.label }}<br>
+                {{ form.date_watched(size=32) }}<br>
+            </div>
+            <div>
+                {{ form.rating.label }}<br>
+                {{ form.rating() }}<br>
+            </div>
+            <div>
+                {{ form.review.label }}<br>
+                {{ form.review(rows=5) }}<br>
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+</body>
+</html>

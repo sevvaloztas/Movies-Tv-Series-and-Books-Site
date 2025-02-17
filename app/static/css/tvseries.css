@@ -1,0 +1,168 @@
+/* movies.css */
+
+body {
+    font-family: 'Julius Sans One', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/*! navbar css start */
+
+.navbar{
+    background-color:  rgb(231,225,208);
+    height: 60px;
+    color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.logo{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+}
+
+.menu-list-item{
+    cursor: pointer;
+}
+
+.menu-list-item a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.menu-list-item a:hover{
+    font-weight: bold;
+}
+
+.menu-list-item.active a{
+    font-weight: bold;
+}
+
+.profile-container{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-text-container{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    line-height: 1;
+}
+
+.toggle{
+    width: 40px;
+    background-color: white;
+    position: relative;
+    height: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+}
+
+/*! navbar css end */
+
+/*! sidebar css start */
+.sidebar{
+    background-color:  rgb(231,225,208);
+    color: black;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    row-gap: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar i{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+}
+/*! sidebar css end */
+
+/* tvseries.css */
+
+.tvseries-section {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+.tvseries-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Boşluk ayarlayabilirsiniz */
+}
+
+.tvseries-card {
+    flex: 0 0 calc(20% - 20px); /* Burada istediğiniz boyutları ayarlayabilirsiniz */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tvseries-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.tvseries-card .tvseries-info {
+    padding: 10px;
+}
+
+.tvseries-card .tvseries-info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.tvseries-card .tvseries-info p {
+    font-size: 14px;
+    color: #666;
+}

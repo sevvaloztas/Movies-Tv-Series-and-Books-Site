@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Movies{% endblock %}
+
+{% block extra_css %}
+    <!-- Ekstra CSS dosyaları buraya eklenebilir -->
+{% endblock %}
+
+{% block content %}
+    <section class="movies-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">Movies</h2>
+                    <p>Browse and discover your favorite movies.</p>
+                    <!-- Movie list or grid can be added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extra_js %}
+    <!-- Ekstra JS dosyaları buraya eklenebilir -->
+{% endblock %}
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+

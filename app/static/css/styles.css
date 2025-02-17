@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+/*! base css start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 200vh;
+    font-family: "Julius Sans One", sans-serif;
+    background-color: rgb(248,246,241);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-wrapper {
+    background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;   
+} 
+
+/*! base css end */
+
+/*! search and trend start */
+
+.inner_content {
+    margin: 20px;
+}
+
+.new_index {
+    padding: 50px 0;
+}
+
+.background_5 {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#media_v4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.search-box input[type="text"] {
+    width: 400px; /* Arama kutusunu daha uzun yap */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+.trending {
+    padding: 20px 0;
+}
+
+.no_pad {
+    padding: 0;
+}
+
+.column_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.content_wrapper {
+    width: 80%;
+}
+
+.wrap {
+    padding: 20px;
+}
+
+.column_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selector_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.selector {
+    display: flex;
+    gap: 10px;
+}
+
+
+/*! search and trend end */
+.inner_content {
+            margin: 20px;
+        }
+
+        .new_index {
+            padding: 30px 0;
+        }
+
+        .background_5 {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        #media_v4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .search input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .trending {
+            padding: 20px 0;
+        }
+
+        .no_pad {
+            padding: 0;
+        }
+
+        .column_wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content_wrapper {
+            width: 80%;
+        }
+
+        .wrap {
+            padding: 10px;
+        }
+
+        .column_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .selector_wrap {
+            display: flex;
+            align-items: center;
+        }
+
+        .selector {
+            display: flex;
+            gap: 10px;
+        }
+
+        .inner_content.background_5 {
+            background-size: cover; /* Arka plan resmi, elementin tamamını kaplayacak şekilde ayarlandı */
+            background-repeat: no-repeat; /* Arka plan resminin tekrarlanmasını engellemek için */
+            background-position: center; /* Arka plan resminin ortalanmasını sağlar */
+        }
+        
+        
+/*! container  start */
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-wrapper {
+    text-align: center;
+    color: white;
+}
+
+.welcome-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/*! container  final */
+
+
+
+/* navbar css start */
+.navbar {
+    background-color: rgb(231, 225, 208);
+    height: 60px;
+    color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+}
+
+.menu-list-item {
+    cursor: pointer;
+}
+
+.menu-list-item a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.menu-list-item a:hover {
+    font-weight: bold;
+}
+
+.menu-list-item.active a {
+    font-weight: bold;
+}
+
+.profile-text {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 16px; /* veya ana sayfadaki başlık boyutunuza uygun bir boyut */
+}
+
+/* Profil konteynerinin genel stili */
+.profile-container {
+    display: flex; /* İçeriği yatayda hizalar */
+    align-items: center; /* İçeriği dikeyde merkezler */
+    position: relative; /* Dropdown menüsünün ve toggle düğmesinin doğru konumlanmasını sağlamak için */
+}
+
+/* Dropdown düğmesinin stil ayarları */
+.profile-container .btn {
+    display: flex; /* İçeriği yatayda hizalar */
+    align-items: center; /* İçeriği dikeyde merkezler */
+    column-gap: 5px; /* Profil fotoğrafı ve metin arasındaki boşluk */
+    text-decoration: none; /* Düğme üzerindeki alt çizgiyi kaldırır */
+    padding: 8px 12px; /* Düğme içindeki boşluk */
+    border: none; /* Düğme etrafında çerçeve yok */
+    border-radius: 8px; /* Düğme köşelerini yuvarlar */
+    background-color: transparent; /* Arka plan rengi transparan */
+    color: #333; /* Metin rengi */
+    font-size: 16px; /* Metin boyutu */
+    font-family: 'Julius Sans One', sans-serif; /* Font ailesi */
+    transition: background-color 0.3s, color 0.3s; /* Geçiş efekti */
+}
+
+/* Hover durumunda düğmenin görünümü */
+.profile-container .btn:hover, .profile-container .btn:focus {
+    background-color: rgba(0, 0, 0, 0.1); /* Arka plan rengini açık gri yapar */
+    color: #000; /* Metin rengini koyu yapar */
+}
+
+/* Active (tıklama) durumunda düğmenin görünümü */
+.profile-container .btn:active {
+    background-color: rgba(0, 0, 0, 0.2); /* Arka plan rengini daha koyu yapar */
+    color: #000; /* Metin rengini koyu yapar */
+}
+
+/* Profil resminin stili */
+.profile-picture {
+    width: 32px; /* Genişlik ayarı */
+    height: 32px; /* Yükseklik ayarı */
+    object-fit: cover; /* Resmin kapsayıcı alanı tamamen kaplamasını sağlar */
+    border-radius: 50%; /* Yuvarlak profil resmi */
+    margin-right: 8px; /* Resmin metinle arasına boşluk ekler */
+}
+
+/* Profil konteynerinin genel stili */
+.profile-container {
+    display: flex; /* İçeriği yatayda hizalar */
+    align-items: center; /* İçeriği dikeyde merkezler */
+    position: relative; /* Dropdown menüsünün ve toggle düğmesinin doğru konumlanmasını sağlamak için */
+}
+
+/* Dropdown düğmesinin stil ayarları */
+.profile-container .btn {
+    display: flex; /* İçeriği yatayda hizalar */
+    align-items: center; /* İçeriği dikeyde merkezler */
+    column-gap: 5px; /* Profil fotoğrafı ve metin arasındaki boşluk */
+    text-decoration: none; /* Düğme üzerindeki alt çizgiyi kaldırır */
+    padding: 5px 10px; /* Düğme içindeki boşluk */
+}
+
+/* Dropdown menüsü */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Menü düğmesinin hemen altında başlar */
+    left: 0; /* Menü, düğmenin solunda başlar */
+    display: none; /* Varsayılan olarak menü gizlidir */
+    background-color: white; /* Menü arka plan rengi */
+    border: 1px solid #ddd; /* Menü kenarlığı */
+    border-radius: 4px; /* Menü köşelerini yuvarlatır */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Menüye gölge ekler */
+    z-index: 1000; /* Menü, diğer içeriklerin üstünde görünür */
+    padding: 0; /* Menü öğeleri arasındaki boşluğu sıfırlar */
+}
+
+/* Menü açıldığında görünür yapar */
+.dropdown-menu.show {
+    display: block; /* Menü görünür */
+}
+
+/* Menü öğelerinin stil ayarları */
+.dropdown-menu .dropdown-item {
+    padding: 8px 16px; /* Menü öğeleri için iç boşluk */
+    text-decoration: none; /* Menü öğeleri üzerindeki alt çizgiyi kaldırır */
+    color: #111010; /* Menü öğeleri için metin rengi */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa; /* Menü öğeleri üzerine gelindiğinde arka plan rengi değişir */
+}
+
+/* Düğme üzerindeki simge */
+.profile-container .bi-caret-down-fill {
+    cursor: pointer;
+}
+
+.toggle{
+    width: 40px;
+    background-color: white;
+    position: relative;
+    height: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+}
+
+/*! navbar css end */
+
+.section-title {
+    font-size: 24px;
+    margin: 20px 0;
+}
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+.scroll-item {
+    flex: 0 0 auto;
+    width: 150px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+.scroll-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/*! sidebar css start */
+.sidebar{
+    background-color:  rgb(231,225,208);
+    color: black;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    row-gap: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar i{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+}
+/*! sidebar css end */
+
+/*! main content start */
+.main-content {
+    margin-left: 80px; /* Add margin to avoid overlap with the sidebar */
+    padding: 20px;
+    z-index: 1; /* Ensure the main content is above other elements */
+}
+/*! main content end */
+
+/* Film kartları için stil */
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.movie-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+    width: 200px; /* Kart genişliği */
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.movie-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.movie-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+.login-page {
+    background: url('../img/login.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+/* Login Container ayarları */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card ayarları */
+.card {
+    background: rgba(255, 255, 255, 0.8); /* Yarı şeffaf beyaz arka plan */
+    padding: 30px;
+    border-radius: 8px; /* Köşeleri yuvarlar */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Gölge efekti */
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    font-family: 'Julius Sans One', sans-serif; /* Başlık yazı tipi */
+}
+
+/* Form elemanları ve etiketlerin yazı tipi */
+.form-label, .form-control, .btn-primary {
+    font-family: 'Julius Sans One', sans-serif !important; /* Yazı tipi */
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem !important; /* Form elemanları arasındaki boşluğu artırır */
+}
+
+/* styles.css */
+
+/* .signup-page sınıfı ile sadece signup sayfası için arka plan resmi */
+.signup-page {
+    background: url('../img/signup.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+/* Common Container ayarları */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card ayarları */
+.card {
+    background: rgba(255, 255, 255, 0.8); /* Yarı şeffaf beyaz arka plan */
+    padding: 30px;
+    border-radius: 8px; /* Köşeleri yuvarlar */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Gölge efekti */
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    font-family: 'Julius Sans One', sans-serif; /* Başlık yazı tipi */
+}
+
+/* Form elemanları ve etiketlerin yazı tipi */
+.form-label, .form-control, .btn-primary {
+    font-family: 'Julius Sans One', sans-serif !important; /* Yazı tipi */
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem !important; /* Form elemanları arasındaki boşluğu artırır */
+}
+
+/* static/css/styles.css */
+.login-page {
+    background-image: url('../img/login.png'); /* Resim yolunu doğru ayarladığınızdan emin olun */
+    background-size: cover; /* Arka planın tüm ekranı kaplamasını sağlar */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: no-repeat; /* Tekrar etmesini engeller */
+    height: 100vh; /* Yüksekliği tam ekran yapar */
+}
